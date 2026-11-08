@@ -1,0 +1,107 @@
+.x {
+  padding: 30px 20px;
+  min-height: 85vh;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.sp {
+  color: #e6b800;
+  transition: color 0.3s ease;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cardo {
+  width: 210px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  background: #e0e0e0;
+  box-shadow: 10px 10px 20px #bebebe,
+              -10px -10px 20px #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 15px;
+}
+
+.cardo:hover {
+  transform: translateY(-6px);
+  box-shadow: 14px 14px 25px #bebebe,
+              -14px -14px 25px #ffffff;
+}
+
+.cim {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.cardo:hover .cim {
+  transform: scale(1.05);
+  filter: drop-shadow(0px 0px 8px rgba(230, 184, 0, 0.5));
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: #252525;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.cardo:hover h3 {
+  color: #e6b800;
+  text-shadow: 0 0 10px rgba(230, 184, 0, 0.6);
+}
+
+/* Dark Mode Overrides */
+body.dark-mode .sp {
+  color: #ffd000;
+}
+
+body.dark-mode .cardo {
+  background: #212121;
+  box-shadow: 10px 10px 20px #161616,
+              -10px -10px 20px #2c2c2c;
+}
+
+body.dark-mode .cardo:hover {
+  box-shadow: 12px 12px 25px #141414,
+              -12px -12px 25px #2e2e2e;
+}
+
+body.dark-mode h3 {
+  color: #f3f4f6;
+}
+
+body.dark-mode .cardo:hover h3 {
+  color: #ffd000;
+  text-shadow: 0 0 10px rgba(255, 208, 0, 0.8), 0 0 20px rgba(255, 208, 0, 0.5);
+}
+
+body.dark-mode .cardo:hover .cim {
+  filter: drop-shadow(0px 0px 12px rgba(255, 208, 0, 0.7));
+}

@@ -1,0 +1,244 @@
+.big {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  color: #252525;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  font-weight: bold;
+  font-size: 26px;
+  transition: all 0.4s ease-in-out;
+}
+
+.login:hover {
+  color: #e6b800;
+  text-shadow: 0 0 10px rgba(230, 184, 0, 0.6);
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 360px;
+  width: 340px;
+  flex-direction: column;
+  gap: 35px;
+  background: #e0e0e0;
+  box-shadow: 12px 12px 25px #bebebe,
+              -12px -12px 25px #ffffff;
+  border-radius: 24px;
+  padding: 30px 20px;
+  transition: all 0.4s ease-in-out;
+}
+
+.inputBox {
+  position: relative;
+  width: 260px;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: #252525;
+  font-size: 1em;
+  background: transparent;
+  border-left: 2px solid #e6b800;
+  border-bottom: 2px solid #e6b800;
+  transition: 0.3s ease;
+  border-bottom-left-radius: 8px;
+}
+
+.inputBox span {
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  transform: translateY(-4px);
+  margin-left: 10px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  transition: 0.4s ease;
+  letter-spacing: 2px;
+  border-radius: 8px;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  transform: translateX(110px) translateY(-16px);
+  font-size: 0.75em;
+  padding: 4px 8px;
+  background: #e6b800;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.inputBox input:valid,
+.inputBox input:focus {
+  border: 2px solid #e6b800;
+  border-radius: 8px;
+}
+
+.enter {
+  height: 45px;
+  width: 120px;
+  border-radius: 12px;
+  border: 2px solid #e6b800;
+  cursor: pointer;
+  background-color: transparent;
+  color: #252525;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.enter:hover {
+  background-color: #e6b800;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(230, 184, 0, 0.6);
+}
+
+/* Contact Link Buttons */
+.social-menu ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.social-menu ul li {
+  list-style: none;
+}
+
+.social-menu ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  color: #252525;
+  font-size: 24px;
+  transition: all 0.4s ease;
+  box-shadow: 6px 6px 14px #bebebe,
+              -6px -6px 14px #ffffff;
+  text-decoration: none;
+}
+
+.social-menu ul li a i {
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.social-menu ul li a:hover {
+  transform: translateY(-4px);
+}
+
+/* GitHub */
+.social-menu ul li:nth-child(1) a:hover {
+  background-color: #24292e;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(36, 41, 46, 0.7);
+}
+
+/* LinkedIn */
+.social-menu ul li:nth-child(2) a:hover {
+  background-color: #0a66c2;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(10, 102, 194, 0.7);
+}
+
+/* Gmail */
+.social-menu ul li:nth-child(3) a:hover {
+  background-color: #ea4335;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(234, 67, 53, 0.7);
+}
+
+/* Dark Mode Overrides */
+body.dark-mode .login {
+  color: #f3f4f6;
+}
+
+body.dark-mode .login:hover {
+  color: #ffd000;
+  text-shadow: 0 0 10px rgba(255, 208, 0, 0.8);
+}
+
+body.dark-mode .card {
+  background: #212121;
+  box-shadow: 10px 10px 20px #161616,
+              -10px -10px 20px #2c2c2c;
+}
+
+body.dark-mode .inputBox input {
+  color: #ffd000;
+  border-left: 2px solid #ffd000;
+  border-bottom: 2px solid #ffd000;
+}
+
+body.dark-mode .inputBox span {
+  color: #a0a0a0;
+}
+
+body.dark-mode .inputBox input:valid ~ span,
+body.dark-mode .inputBox input:focus ~ span {
+  background: #ffd000;
+  color: #121212;
+}
+
+body.dark-mode .inputBox input:valid,
+body.dark-mode .inputBox input:focus {
+  border: 2px solid #ffd000;
+}
+
+body.dark-mode .enter {
+  border: 2px solid #ffd000;
+  color: #f3f4f6;
+}
+
+body.dark-mode .enter:hover {
+  background-color: #ffd000;
+  color: #121212;
+  box-shadow: 0 0 15px rgba(255, 208, 0, 0.8);
+}
+
+body.dark-mode .social-menu ul li a {
+  background: #212121;
+  color: #f3f4f6;
+  box-shadow: 6px 6px 14px #161616,
+              -6px -6px 14px #2c2c2c;
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 90vw;
+    min-height: 320px;
+  }
+
+  .inputBox {
+    width: 80vw;
+  }
+}
